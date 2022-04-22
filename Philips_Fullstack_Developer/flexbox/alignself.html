@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - align self</title>
+
+    <style>
+        .flex-container {
+            max-width: 350px;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            display: flex;
+        }
+
+        .align-container {
+            align-items: center;
+        }
+
+        .item {
+            background-color: orangered;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .direction {
+            flex-direction: column;
+        }
+
+        .center {
+            align-self: center;
+        }
+
+        .start {
+            align-self: flex-start;
+        }
+
+        .end {
+            align-self: flex-end;
+        }
+
+        .stretch {
+            align-self: stretch;
+        }
+
+        .baseline {
+            align-self: baseline;
+        }
+
+        .auto {
+            align-self: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <p>align-self auto com align-container</p>
+    <section class="flex-container align-container">
+        <div class="item auto">AAA</div>
+        <div class="item auto">123</div>
+        <div class="item auto">O SENHOR TEM MUITOS FILHOS MUITOS FILHOS</div>
+        <div class="item auto">ITEM 4</div>
+    </section>
+
+    <p>align-self center</p>
+    <section class="flex-container">
+        <div class="item center">AAA</div>
+        <div class="item center">123</div>
+        <div class="item center">O SENHOR TEM MUITOS FILHOS MUITOS FILHOS</div>
+        <div class="item center">ITEM 4</div>
+    </section>
+
+    <p>align-self start </p>
+    <section class="flex-container">
+        <div class="item start">AAA</div>
+        <div class="item start">123</div>
+        <div class="item start">O SENHOR TEM MUITOS FILHOS MUITOS FILHOS</div>
+        <div class="item start">ITEM 4</div>
+    </section>
+
+    <p>align-self end </p>
+    <section class="flex-container">
+        <div class="item end">AAA</div>
+        <div class="item end">123</div>
+        <div class="item end">O SENHOR TEM MUITOS FILHOS MUITOS FILHOS</div>
+        <div class="item end">ITEM 4</div>
+    </section>
+
+    <p>align-self stretch </p>
+    <section class="flex-container">
+        <div class="item stretch">AAA</div>
+        <div class="item stretch">123</div>
+        <div class="item stretch">O SENHOR TEM MUITOS FILHOS MUITOS FILHOS</div>
+        <div class="item stretch">ITEM 4</div>
+    </section>
+
+    <p>align-self baseline </p>
+    <section class="flex-container">
+        <div class="item baseline">AAA</div>
+        <div class="item baseline">123</div>
+        <div class="item baseline">O SENHOR TEM MUITOS FILHOS MUITOS FILHOS</div>
+        <div class="item baseline">ITEM 4</div>
+    </section>
+
+    <p>align-self diversos</p>
+    <section class="flex-container">
+        <div class="item start">AAA</div>
+        <div class="item end">123</div>
+        <div class="item baseline">O SENHOR TEM MUITOS FILHOS MUITOS FILHOS</div>
+        <div class="item stretch">ITEM 4</div>
+    </section>
+
+    <p>align-self diversos column</p>
+    <section class="flex-container direction">
+        <div class="item start">AAA</div>
+        <div class="item end">123</div>
+        <div class="item auto">O SENHOR TEM MUITOS FILHOS MUITOS FILHOS</div>
+        <div class="item start">ITEM 4</div>
+    </section>
+
+
+
+</body>
+
+</html>
