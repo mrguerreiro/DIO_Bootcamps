@@ -1,0 +1,58 @@
+Anotações sobre o aprendizado no Bootcamp HTML Web Developer
+
+GIT/GITHUB
+INICIO DO PROJETO E ENVIO PARA O GITHUB
+- CRIAR REPOSITORIO NO GIT
+ABRE-SE O GIT APARTIR DO WORKSPACE
+$ls
+$mkdir "nome do repositorio" (cria o repositório)ls
+$cd "nome do repositório" (Abre o repositorio)
+$git init
+$cd .. (volta um nivel)
+$git add ..
+$git commit -m "texto mensagem"
+ 
+CRIA-SE UM REPOSITÓRIO NO GITHUB PARA RECEBER O QUE FOI FEITO NO GIT
+$git remote add origin "link do repositório no Github"
+$git push origin master
+
+
+
+OUTRA MANEIRA DE FAZER O MESMO
+CRIAR O REPOSITÓRIO NO GITHUB
+COPIAR URL DO REPOSITORIO
+ABRIR O GITBASH APARTIT DE WORKSPACE
+$git clone "url do repositorio criado"
+$ls
+$cd nome do repositorio
+$ls
+IR PARA O VSCODE E ABRIR A PASTA DO REPOSITORIO CRIADO E INCLUIR OS ARQUIVOS 
+NESCESSARIOS
+DEPOIS DE PRONTO O PROJETO IR PARA O GIT
+$ls
+$git add .
+git commit -m "texto mensagem"
+git push origin master
+
+
+COMO ENVIAR MUDANÇAS FEITAS NO REPOSITORIO LOCAL PARA O GITHUB
+ABRE-SE O REPOSITORIO LOCAL COM O GIT BASH
+$ git pull origin master (incorpora as mudanças feitas)
+$ git status
+$ git commit - m "descricao do commit"
+$ git push origin master
+
+
+RENOMEANDO BRANCHES
+Para renomear a sua atual branch local, execute o comando branch com a opção -m, 
+passando o novo nome:
+$git branch -m novo-nome-da-branch
+Se você estiver em uma branch e quiser renomear outra, você deve passar primeiro 
+o nome atual da branch que quer renomear:
+$git branch -m nome-atual novo-nome
+
+
+
+
+==================================================================================
+==================================================================================
