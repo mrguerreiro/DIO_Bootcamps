@@ -99,7 +99,17 @@ manipulá-lo.
 • indexOf() – retorna o índice de um valor;
 • splice() – remove ou substitui um item pelo índice;
 • slice() – retorna uma parte de um array existente.
+---------------------------------------------------------------------------
+Spread: Uma forma de liadr separadamente com elementos.
 
+function sum(x, y, z) {
+  return x+y+z;
+}
+const numbers = [1,2, 3];
+console.log(sum(...numbers));
+
+Oque era parte de uma array se torna um numero independente.
+----------------------------------------------------------------------------
 ===============================================================================
 
 Objetos
@@ -282,6 +292,90 @@ console.log(a);
 // como ler: a variável a vai receber mais um e imprimir
 no console até que seu valor chegue a 10
 
+--------------------------------------------------------------------------------
+This: O que é?
+A palavra reservada This é uma referencia de contexto.
+No exemplo. this refere-se ao objeto pessoa.
+
+const pessoa = {
+   firstName: "Andre",
+   LastName : "Soares",
+   id       : 1,
+   fullName : function() {
+     return this.firstName + "" + this.lastName;
+},
+getId: function() {
+  return this.id;
+}
+};
+
+pessoa.fullName();
+//"Andre Soares"
+pessoa.getId();
+// 1
+
+manipulando o valor de This
+Call / Apply (é possivel passar parmetros para essa função(apply) dentro de um array.
+exemplo:
+
+     const pessoa = {
+       nome: 'Miguel',
+     };
+     const animal = {
+       nome: 'Murphy',
+     };
+     function getSomething() {
+       console.log(this,nome);
+     }
+     getSomething.call(pessoa);
+
+$node playground.js
+Miguel
+
+     getSomething.call(animal);
+$node playground.js
+Murphy
+
+Bind
+Clona a estrutura da função onde é chamada e aplica o valor do objeto passado como parametro.
+exemplo:
+  const retornaNomes = function () {
+     return this.nome;
+  };
+  let bruno = retornaNomes.bind({ nome: 'Bruno" };
+  bruno()
+// Bruno
+--------------------------------------------------------------------------------------------
+ARROW FUNCTIONS
+=>
+Exemplo sem arrow function 
+  const helloWord = function() {
+    return Hello World";
+  }
+Exemplo com arrow function
+   const helloWorld = () => {
+     return "Hello World";
+   }
+
+ou ainda
+const helloWorld = () => "Hello World"
+
+- Caso exista apenas uma linha pode dispensar as chaves e o return.
+- Caso exista apenas um parametro, pode dispensar os parenteses.
+
+Exemplos: 
+  const soma = (a, b) => a+b;
+  soma (4, 6);
+//10
+
+const soma = a => a;
+soma(4);
+// 4
+Arrow function não faz hoisting!
+Outras restrições:
+- "this" sempre será o objeto global. Métodos para modifiar seu valor não irão funcionar;
+- Não existe o objeto "arguments";
+- O construtur (ex: new Meu Objeto()) tambem não pode ser utilizado.
 Para saber mais:
 Estruturas condicionais –
 https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Buildi
@@ -383,7 +477,6 @@ const resultSub = calc(sub, 1, 2);
 console.log(resultSub); //-1
 console.log(resultSoma);//3
 ------------------------------------------------------------------------------
-
 
 Para saber mais:
 Funções –
