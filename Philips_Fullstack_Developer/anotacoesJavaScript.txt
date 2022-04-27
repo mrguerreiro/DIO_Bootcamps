@@ -569,3 +569,71 @@ Vinculando ao HTML
 Para fazer testes localmente (de um arquivo de seu computador), será necessário 
 estar rodando um servidor. Isso pode ser feito utilizando a extensão live server 
 do VScode.
+--------------------------------------------------------------------------------
+
+MAP
+const myMap =nw Map()
+myMap.set(vai adicionar)
+myMap.get(vai ler)
+myMap.delete (vai delatar)
+
+MAP Vs OBJETO
+
+- Maps podem ter chaves de qualquer tipo;
+- Maps possuem a propriedade lenght;
+- Maps são mais fáceis de iterar;
+- Utilizado quando o valor das chaves é desconhecido;
+- O svalores tem o mesmo tipo. 
+----------------------------------------------------------------------------
+SET
+Sets são estruturas  que armazenam apenas valores unicos.
+
+const mySet = new Set();
+
+mySet.add (vai adicionar)
+mySet.has (vai consultar)
+mySet.delete( vai deletar)
+
+SET Vs ARRAY
+
+-Possui valores unicos;
+- Em vez da propriedade lenght, consulta-se o ´umero de  registros pela 
+propriedade size;
+- Não possui os metodos map, filter reduce, etc.
+
+==============================================================================
+ Error do ECMAScript e DOMException
+
+ECMAScript são erros que ocorrem em tempo de execução.
+composto por:
+-Mensagem
+-Nome
+-Linha
+-Call Stack
+
+DOMException são erros rlacionados a parte do codigo que esta rodando 
+naquele momento na pagina da web
+
+TRATAMENTO DE ERROS
+Throw
+Se colocado no lugar de return irá retornar por exemplo ao inves de
+"String Invalida", "String invalida" e todas as especificacoes do erro
+
+Try...catch
+captura e trata o erro
+
+CRIANDO ERROS PERSONALIZADOS
+O objeto error
+Código:
+
+new Error(message, fileName, lineNumber)
+// todos os parametros são opcionais
+const MeuErro = new Error('Mensagem invalida');
+throw MeuErro;
+
+const MeuErro = new Error('Mensagem Invalida');
+MeuErro.name = 'InvalidMessage';
+throw MeuErro;
+
+
+
