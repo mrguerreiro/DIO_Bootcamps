@@ -634,6 +634,40 @@ throw MeuErro;
 const MeuErro = new Error('Mensagem Invalida');
 MeuErro.name = 'InvalidMessage';
 throw MeuErro;
+============================================================================
+Orientação a objetos
+Paradigmas
+imperativos:			Declarativos
+Procedural			Logica
+Orientação a objetos		Funcional
+processos paralelos		Data base
+
+Os programas são "objetos" que possuem uma série de propriedades.
+Pilares:
+- Herança: O objeto herda propriedades e metodos do objeto pai.
+
+- Polimorfismo: Objetos podem herdare a mesma classe pai, mas se comportarem
+de forma diferente quando invocamos seus métodos.
+
+- Encapsulamento: Cada classe tem propriedades  métodos independentes do 
+restante do código.
+
+- Abstração: "Prcesso mental que consiste em isolar um aspecto determinado 
+de um estado de coisas relativamente complexo,a fi de simplficar a sua 
+avaliação, classificação o para permitir a comunicação do mesmo" 
+----------------------------------------------------------------------
+Protótipos
+Todos os objetos Javascript herdam propriedades e métodos de um prototype
+(protótipo). O onjeto Object prototype está no topo desta cadeia.
+
+Classes 
+Syntatic sugar: uma siontaxe feita para facilitar a escrita. Na realidae 
+não existe no Javascript classes.
+Javascript não possui classes nativamente. Todas as classes são objetos e a
+herança se dá por protótipos.
+
+
+
 
 
 
