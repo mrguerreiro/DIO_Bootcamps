@@ -665,6 +665,65 @@ Syntatic sugar: uma siontaxe feita para facilitar a escrita. Na realidae
 não existe no Javascript classes.
 Javascript não possui classes nativamente. Todas as classes são objetos e a
 herança se dá por protótipos.
+=============================================================================
+Assincrono
+"Que não ocorre ao mesmo tempo."
+
+Promisses
+Objeto de processamento assincrono.
+Inicialmente, seu valor é desconhecido.Ela pode, entao, ser resolvida ou 
+rejeitada.
+Uma promisse pode ter 3 estados:
+- Pending (pendente)
+- Fulfilled (resolvido)
+- Rejected (rejeitado)
+Manipulação:
+
+const myPromisse = new Promise((resolve, reject) => {
+    window.setTimeout(() => {
+        resolve('resolvida';
+    }, 2000);
+});
+
+await myPromisse
+        .then((result) => result + ' passando pelo then')
+        .then((result) => result + 'e agora acabou!')
+        .catch((err) => consle.log(err.message));
+
+Async/await
+Funções assincronas precisam destas duas palavras chave.
+
+async function resolvePromise() {
+  const myPromisse = new Promise((resolve, reject) => {
+    window.setTimeout(() => {
+        resolve('resolvida';
+    }, 3000);
+});
+
+const resolved = await myPromisse
+        .then((result) => result + ' passando pelo then')
+        .then((result) => result + 'e agora acabou!')
+        .catch((err) => consle.log(err.message));
+  return resolved;
+}
+----------------------------------------------------------------------
+O que são APIS
+Application Programming Interface
+Uma API é uma forma de intermediar os resultados do back-end com o que é
+aprsentado no front-end
+voce consegue acessa-la por meio de URLs.
+
+JSON: JavaScript Object Notation
+è muito comum que APIS retornem seus dados no formato .json, portanto
+precisamos tratar esses dados quando os recebermos.
+
+fetch
+
+fetch(url, options)
+   .then(response => response.json())
+   .then(json => console.log(json))
+//retorna uma promisse
+Operações no banco (POST, GET, PUT, DELETE, etc.)
 
 
 
